@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- Designined by CodingLab - youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Student Registration Form </title>
+    <link rel="stylesheet" href="css\registration.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#" method="POST" autocomplete="off" name="website-registrations">
+        <div class="user-details">
+          <div class="input-box" name="first-name">
+            <span class="details">First Name</span>
+            <input type="text" name="first-name" placeholder="Enter your first name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Last name</span>
+            <input type="text" name="last-name" placeholder="Enter your lastname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email-id" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phone" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Select Standard : </span>
+            <select class="option" name="standard" required>
+              <option value="" disabled selected>--Choose option--</option>
+              <!-- <option disabled="disabled" selected="selected">--Choose option--</option> -->
+              <option>8</option>
+              <option>9</option>
+          </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Select Subject : </span>
+            <select class="option" name="subject" required>
+              <option value="" disabled selected>--Choose option--</option>
+              <!-- <option disabled="disabled" selected="selected">--Choose option--</option> -->
+              <option>Biology</option>
+              <option>Science</option>
+          </select>
+          </div>
+        </div>
+        <div class="board-details">
+          <input type="radio" name="icse" id="dot-1">
+          <input type="radio" name="ssc" id="dot-2">
+          <span class="board-title"> Select Board : </span>
+          <div class="category">
+            <label for="dot-1" style="width: 30%;">
+            <span class="dot one"></span>
+            <span class="board">ICSE</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="board">SSC</span>
+          </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbztMitHTIlw-_DabJJu0YXEi8BNkNRaAujis7Mr-FA6YZ8hnhbtaKtfEGbXk82On44dkA/exec'
+    const form = document.forms['website-registrations']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => alert("Your registration details are saved..! We will contact you shortly.."))
+            .catch(error => console.error('Error!', error.message))
+        document.querySelector("form").reset();
+    })
+</script>
+</body>
+</html>
