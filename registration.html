@@ -38,30 +38,6 @@
               <option>9</option>
           </select>
           </div>
-          <div class="input-box">
-            <span class="details">Select Subject : </span>
-            <select class="option" name="subject" required>
-              <option value="" disabled selected>--Choose option--</option>
-              <!-- <option disabled="disabled" selected="selected">--Choose option--</option> -->
-              <option>Biology</option>
-              <option>Science</option>
-          </select>
-          </div>
-        </div>
-        <div class="board-details">
-          <input type="radio" name="icse" id="dot-1">
-          <input type="radio" name="ssc" id="dot-2">
-          <span class="board-title"> Select Board : </span>
-          <div class="category">
-            <label for="dot-1" style="width: 30%;">
-            <span class="dot one"></span>
-            <span class="board">ICSE</span>
-          </label>
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="board">SSC</span>
-          </label>
-          </div>
         </div>
         <div class="button">
           <input type="submit" value="Register">
@@ -80,16 +56,6 @@
             .catch(error => console.error('Error!', error.message))
         document.querySelector("form").reset();
     })
-</script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-200243906-1">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-200243906-1');
 </script>
 </body>
 </html>
